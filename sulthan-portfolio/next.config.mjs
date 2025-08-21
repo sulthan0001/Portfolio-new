@@ -27,6 +27,14 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+    // ✅ Fix CSP eval warning in dev
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.devtool = "cheap-module-source-map"; // removes eval()
+    }
+    return config;
+  },
+
 }
 
 if (userConfig) {
