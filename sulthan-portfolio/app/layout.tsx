@@ -38,6 +38,11 @@ export const metadata: Metadata = {
       "Mern stack developer specializing in building responsive web applications and android native apps",
     siteName: "Sulthan Basha Portfolio",
   },
+  icons: {
+    icon: "/pic.jpg",       // put favicon.ico inside /public
+    shortcut: "/pic1.jpg",
+    apple: "/pic1.jpg", // optional (for iOS home screen)
+  },
 };
 
 export default function RootLayout({

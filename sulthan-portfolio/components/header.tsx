@@ -98,7 +98,7 @@ const Header = ({ setAboutGlow }: { setAboutGlow?: (v: boolean) => void }) => {
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((link, index) => (
             <motion.div
-              key={link.name}
+              key={link.id}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -202,7 +202,7 @@ const Header = ({ setAboutGlow }: { setAboutGlow?: (v: boolean) => void }) => {
             <nav className="container flex flex-col py-8 space-y-6">
               {navItems.map((link, index) => (
                 <motion.div
-                  key={link.name}
+                  key={link.id}
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.3 }}
